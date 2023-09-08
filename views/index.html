@@ -1,32 +1,48 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Timestamp Project</title>
+    <style>
+      .instruct {
+        float: left;
+        margin-left: 10px;
+        height: 150px;
+        width: 400px;
+        font-size: 15px;
+      }
 
-<html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+      body {
+        background-color: lightblue;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        let date = "localhost:3000/api/" + document.getElementById("date").value;
+        return date 
+      }
+    </script>
+  </head>
+  <body>
+    <h1 align="center";>Timestamp Microservice</h1><br><br>
+    <div>
+      <div class="instruct">
+        <b>EXAMPLE - ENTER DATE INTO THE URL AS:<br><br>
+        UTC Time:  [project url]/api/yyyy-mm-dd   OR<br>
+        UNIX Timestamp:  [project url]/api/ddddddddddddd</b></div>
 
-   <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
-    <div class="container">
-      <h3>Example Usage:</h3>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
+        <div class="instruct">
+          <b>EXAMPLE - ENTER DATE INTO THE INPUT FIELD:<br><br>
+          UTC Time: yyyy-mm-dd   OR<br>
+          UNIX Timestamp: ddddddddddddd</b></div>
+    </div>  
 
-      <h3>Example Output:</h3>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
-    </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
-      </p>
+    <div align="center">
+      <form action="api/" align="center" method="get">     
+        <label for="date" id="date-label">Enter Date:</label>
+        <input type="text" id="date" name="date" background-color="blue">
+        <input type="submit" id="submit" value="submit" color="blue">
+      </form>
     </div>
   </body>
 </html>
