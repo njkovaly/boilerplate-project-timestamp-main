@@ -5,8 +5,10 @@
     <title>Timestamp Project</title>
     <style>
       .instruct {
-        float: left;
-        margin-left: 10px;
+        background-color: white;
+        color: darkblue;
+        text-align: center;
+        margin: auto;
         height: 150px;
         width: 400px;
         font-size: 15px;
@@ -16,33 +18,14 @@
         background-color: lightblue;
       }
     </style>
-    <script>
-      function myFunction() {
-        let date = "localhost:3000/api/" + document.getElementById("date").value;
-        return date 
-      }
-    </script>
   </head>
   <body>
-    <h1 align="center";>Timestamp Microservice</h1><br><br>
+    <h1 align="center">Timestamp Microservice</h1><br><br>
     <div>
-      <div class="instruct">
+      <div class="instruct"><br><br>
         <b>EXAMPLE - ENTER DATE INTO THE URL AS:<br><br>
-        UTC Time:  [project url]/api/yyyy-mm-dd   OR<br>
+        UTC Time:  [project url]/api/yyyy-mm-dd  OR<br><br>
         UNIX Timestamp:  [project url]/api/ddddddddddddd</b></div>
-
-        <div class="instruct">
-          <b>EXAMPLE - ENTER DATE INTO THE INPUT FIELD:<br><br>
-          UTC Time: yyyy-mm-dd   OR<br>
-          UNIX Timestamp: ddddddddddddd</b></div>
     </div>  
-
-    <div align="center">
-      <form action="api/" align="center" method="get">     
-        <label for="date" id="date-label">Enter Date:</label>
-        <input type="text" id="date" name="date" background-color="blue">
-        <input type="submit" id="submit" value="submit" color="blue">
-      </form>
-    </div>
   </body>
 </html>
