@@ -20,29 +20,6 @@ app.get("/", function (req, res) {
 
 const invalidDate = (date) => date.toUTCString() === "Invalid Date";
 
-/*app.get("/api", (req, res) => {
-  // const url = new URL(req.url);
-  let reqString = req.url.split("=");
-  console.log(reqString.length);
-  const params = reqString[1];
-  let date = new Date(reqString[1]);
-
-  if (invalidDate(date)) {
-    date = new Date(+reqString[1]);
-   }
-   console.log(date);  
-
-  if (invalidDate(date)) {
-      res.json({error: "Invalid Date"});
-      return
-  } else {
-    res.json ({
-    unix: date.getTime(),
-    utc: date.toUTCString()
-    });
-  }
-}); */
-
 app.get("/api/:date", (req, res) => {
   let date = new Date(+req.params.date);
 
@@ -70,20 +47,11 @@ app.get("/api/", (req, res) => {
 });
 
 // listen for requests :)
-var listener = app.listen(1337, function () {
-  console.log('Your app is listening on port 1337');
-});
-
-/*const http = require('http');
-
-const server = http.createServer(function(request, response) {
-    response.writeHead(200, { "Content-Type": "text/html" });
-    response.end("<html><body><h1>Hello World!</h1></body></html>");
-});
-
 const port = process.env.PORT || 1337;
-server.listen(port);
 
-console.log(`Server running at http://localhost:${port}`);*/
+var listener = app.listen(port, function () {
+  console.log(port);
+  console.log('Your app is listening on port ${port}');
+});
 
 
