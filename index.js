@@ -70,11 +70,11 @@ app.get("/api/", (req, res) => {
 });
 
 // listen for requests :)
-/*var listener = app.listen(3000, function () {
-  console.log('Your app is listening on port 3000');
-}); */
+var listener = app.listen(1337, function () {
+  console.log('Your app is listening on port 1337');
+});
 
-const http = require('http');
+/*const http = require('http');
 
 const server = http.createServer(function(request, response) {
     response.writeHead(200, { "Content-Type": "text/html" });
@@ -84,6 +84,6 @@ const server = http.createServer(function(request, response) {
 const port = process.env.PORT || 1337;
 server.listen(port);
 
-console.log(`Server running at http://localhost:${port}`);
+console.log(`Server running at http://localhost:${port}`);*/
 
 
