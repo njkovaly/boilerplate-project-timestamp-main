@@ -50,8 +50,7 @@ app.get("/api/", (req, res) => {
 const port = process.env.PORT || 1337;
 
 var listener = app.listen(port, function () {
-  console.log(port);
-  console.log('Your app is listening on port ${port}');
+  console.log('Your app is listening on port: ' + port);
 });
 
 
